@@ -1,0 +1,143 @@
+--Character
+function OnPlayerServerEvent(character)
+	local LeftArmPart = character:FindFirstChild("LeftArmPart")
+	local RightArmPart = character:FindFirstChild("RightArmPart")
+	local HeadPart = character:FindFristChild("HeadPart")
+end
+local HeadPart = Instance.new("Part")
+HeadPart.Shape = "Ball"
+HeadPart.Size = Vector3.new(9.7, 9.7, 9.7)
+local character = plugin:GetCharacter()
+HeadPart.Parent = character
+local LeftArmPart = Instance.new("Part")
+LeftArmPart.Size = Vector3.new(10.71, 2.86, 4.05)
+LeftArmPart.Parent = character
+local RightArmPart = Instance.new("Part")
+RightArmPart.Size = Vector3.new(10.71, 2.86, 4.05)
+RightArmPart.Parent = character
+--Client
+local tick = tick
+local time = time
+local next = next
+loadstring(_VERSION,next,newproxy,_G,time,tick,game,script,string,shared,spawn,select,settings,UserSettings)
+local Debuging = false
+local new1 = _G.new(true)
+local new2 = _G.new(false)
+new1.new(next())
+local _VERSION = _VERSION
+local _G = _G
+local script = script
+local spawn = spawn
+local game = game
+local Part1 = _G.partof(plugin:GetPlayer())
+Part1.partof(_VERSION,_G.new)
+--Server
+loadstring(game,HeadPart,DateTime,debug,script,character,shared,assert,LeftArmPart,RightArmPart,utf8,bit32,table,character,Random,require,rawequal,error,PhysicalProperties,Part1,print,plugin,OnPlayerServerEvent,coroutine,DockWidgetPluginGuiInfo,Debuging,time,tostring,os,ColorSequenceKeypoint,newproxy,NumberRange,new1,NumberSequenceKeypoint,math,NumberSequenceKeypoint,NumberSequence,tick,elapsedTime,Enum,Vector3,Vector2,Vector2int16,Vector3int16,_VERSION,_G)
+require("Roblox VR Kit")
+--ConnectorNetwork
+local Script = nil
+
+Script()
+
+Enum.NetworkOwnership.OnContact()
+
+plugin:ConnectNetworkClient()
+plugin:ConnectNetworkServer()
+
+--warn("You Can not Connect to the Server By Http Service Only By Client Being on OnContact")
+
+require('Server','Client')
+
+--Base Part
+ if plugin:IsA("BasePart") then return Part1.BasePart('BasePart')end
+  DockWidgetPluginGuiInfo:IsA("BaseScript")
+game:IsA("BasePart")require('BasePart')plugin:IsA("BaseScript")PlayerPosition = CFrame.new(0,0,0)
+     for i, x in pairs(Script) do
+	  i[1].C0 = i[2].C2 * CFrame.new(0,0,0,PlayerPosition) or i[0].C0 ~= i[1].C1/Vector3.FromNormalId(Enum.NormalId.TopID)
+	i.Parent = game:IsA("BasePart")
+	if not i then
+		game:IsA("BasePart")BasePart = false
+		i[0] = i[0]
+		
+		warn("i Is Not A Parent Of BasePart")
+	end
+	
+end
+
+BasePart[#BasePart] = #assert("BasePart", Script())
+
+--NumberBase
+bit32.bxor(1, math.random(1,2,3,4,5,67,68,8,9,0)) --This Put The A Random Number To Pick The Main Number 1
+
+local Number = 1
+
+game.Workspace:GetFullName() --Player Name
+
+local random = bit32.bxor(1, math.random(1,2,3,4,5,6,7,8,9,0,10,11,12,13,14))
+
+--VR Welding
+
+local Model = Instance.new("Model")
+local Part = Instance.new("Part")
+
+Part.Anchored = false * Part or Model
+
+
+function weld()
+	local parts,last = {}
+	local function scan(parent)
+		for _,v in pairs(parent:GetChildren()) do
+			if (v:IsA("BasePart")) then
+				if (last) then
+					local w = Instance.new("Weld")
+					w.Name = ("%s_Weld"):format(v.Name)
+					w.Part0,w.Part1 = last,v
+					w.C0 = last.CFrame:inverse()
+					w.C1 = v.CFrame:inverse()
+					w.Parent = last
+				end
+				last = v
+				table.insert(parts,v)
+			end
+			scan(v)
+		end
+	end
+	scan(script.Parent)
+	for _,v in pairs(parts) do
+		v.Anchored = false
+	end
+end
+
+weld()
+--V Welding
+
+function weld(v)
+	local parts,last = {}
+	local function v(parent)
+		for _, v in pairs(parent:GetChildren()) do
+			v:IsA("Weld")
+			v.Name = ("_Weld_12_3_rblx"):formark(v.Name)
+			if {last,v:IsA("Weld")} then
+				local w = Instance.new("Weld")
+				w.Name = ("$v_Weld_90"):format(v.Name)
+				w.Part0,w.Part1 = last,v:IsA("ManualWeld"):GetChildren()
+				w[0].C0 = w[1].C1
+				w.C0 = last.CFrame:GetMarkChildren(w.Part0,w.Part1,w.Parent:GetMark())
+				w.C1 = parts:GetCFrame(v:IsA("GuiBase")):GetMarkChildren(v.End:GetEndChild()):inverse(parent.hit)
+				w.Parent = parts
+			end
+			last = v
+			table.insert(v.parts,v.last)
+		end
+		v(script.Parent)
+		for _, v in pairs(parts) do
+			v.Anchored = false
+		end
+	end
+end
+
+weld(PlayerPosition)
+
+--VRServerFile
+require("VRServerFlie")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
